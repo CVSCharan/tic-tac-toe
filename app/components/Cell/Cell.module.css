@@ -1,0 +1,51 @@
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
+}
+
+.line1,
+.line2 {
+  content: "";
+  position: absolute;
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+  background-color: black;
+}
+
+.line1 {
+  transform: rotate(45deg);
+}
+
+.line2 {
+  transform: rotate(-45deg);
+}
+
+.circle1,
+.circle2 {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: var(--mark-size);
+  height: var(--mark-size);
+  background-color: black;
+}
+
+.circle2 {
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
+  background-color: white;
+}
